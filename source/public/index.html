@@ -15,21 +15,26 @@
 
     <script src="app.js"></script>
 
-    <div id="output">
-    </div>
+    <div id="output"></div>
+
     <script>
         function add(input) {
             const data = document.getElementById('input').value;
-            const button = document.getElementsByClassName('button')[0];
-            const result = document.getElementById('output');
-            const ul = document.createElement('ul');
+            
+            if (data === '') {
+                document.getElementById('input').value = "Sorry, not be empty";
 
-            const li = document.createElement('li');
-            li.innerHTML = data;
-            ul.appendChild(li);
-            result.append(ul);
-            document.getElementById('input').value = "";
+            } else {
+                const button = document.getElementsByClassName('button')[0];
+                const result = document.getElementById('output');
+                const ul = document.createElement('ul');
 
+                const li = document.createElement('li');
+                li.innerHTML = data;
+                ul.appendChild(li);
+                result.append(ul);
+                document.getElementById('input').value = "";
+            }
         }
         
         function remove(input) {
