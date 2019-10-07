@@ -2,11 +2,9 @@
 <head>
     <meta charset="UTF-8">
     <title>ToDo list</title>
-    <link rel="stylesheet" href="./css.css">
-    <script src="app.js"></script>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-
     <div id="container">
         <h1>Todo List</h1>
         <input id="input" type="text" placeholder="add something in todo list">
@@ -15,11 +13,11 @@
         <button class="button" onclick="remove()">Remove</button>
     </div>
 
+    <script src="app.js"></script>
+
     <div id="output">
     </div>
-
     <script>
-        let counter = 1;
         function add(input) {
             const data = document.getElementById('input').value;
             const button = document.getElementsByClassName('button')[0];
