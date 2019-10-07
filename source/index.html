@@ -11,28 +11,33 @@
         <h1>Todo List</h1>
         <input id="input" type="text" placeholder="add something in todo list">
 
-        <button class="button" onclick="engine()">Add</button>
+        <button class="button" onclick="add()">Add</button>
+        <button class="button" onclick="remove()">Remove</button>
     </div>
 
     <div id="output">
-        <ul id="ul">
-
-        </ul>
     </div>
 
     <script>
-        function engine(input) {
+        let counter = 1;
+        function add(input) {
             const data = document.getElementById('input').value;
             const button = document.getElementsByClassName('button')[0];
             const result = document.getElementById('output');
-            const ul = document.getElementById('ul');
+            const ul = document.createElement('ul');
 
             const li = document.createElement('li');
             li.innerHTML = data;
             ul.appendChild(li);
-            console.log(data);
+            result.append(ul);
+            document.getElementById('input').value = "";
 
-
+        }
+        
+        function remove(input) {
+            let parent = document.getElementById('output');
+            let firstElement = parent.firstChild;
+            parent.removeChild(firstElement);
         }
     </script>
 </body>
