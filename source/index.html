@@ -11,7 +11,29 @@
         <h1>Todo List</h1>
         <input id="input" type="text" placeholder="add something in todo list">
 
-        <button class="button" onclick="clickButton()">Add</button>
+        <button class="button" onclick="engine()">Add</button>
     </div>
+
+    <div id="output">
+        <ul id="ul">
+
+        </ul>
+    </div>
+
+    <script>
+        function engine(input) {
+            const data = document.getElementById('input').value;
+            const button = document.getElementsByClassName('button')[0];
+            const result = document.getElementById('output');
+            const ul = document.getElementById('ul');
+
+            const li = document.createElement('li');
+            li.innerHTML = data;
+            ul.appendChild(li);
+            console.log(data);
+
+
+        }
+    </script>
 </body>
 </html>
