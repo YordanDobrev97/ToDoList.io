@@ -13,7 +13,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "gh-pages -d public",
-    "deploy": "gh-pages -d public"
+    "deploy": "gh-pages -d source/public"
   },
   "repository": {
     "type": "git",
