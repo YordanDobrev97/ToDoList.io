@@ -4,6 +4,7 @@ const app = Sammy('#main', function() {
     this.use('Handlebars', 'hbs');
 
     this.get('#/', controllers.get.home);
+    this.get('#/login', controllers.get.login);
 });
 
 (() => {
