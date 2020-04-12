@@ -1,0 +1,23 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "single page application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YordanDobrev97/ToDoList.git"
+  },
+  "author": "yordan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YordanDobrev97/ToDoList/issues"
+  },
+  "homepage": "https://github.com/YordanDobrev97/ToDoList#readme",
+  "dependencies": {
+    "handlebars": "^4.7.6",
+    "sammy": "^0.7.6"
+  }
+}

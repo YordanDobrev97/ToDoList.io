@@ -1,14 +1,11 @@
-const express = require('express');
-const path = require('path');
-const port = 8080 || process.env.PORT;
-const app = express();
+import controllers from './controllers/home.js';
 
-app.use(express.static(path.join(__dirname, 'public')));
+const app = Sammy('#main', function() {
+    this.use('Handlebars', 'hbs');
 
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/public/index.html');
+    this.get('#/', controllers.get.home);
 });
 
-app.listen(port);
-
-console.log('Running...');
+(() => {
+    app.run('#/');
+})();

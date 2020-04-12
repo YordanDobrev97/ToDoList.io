@@ -3,45 +3,20 @@
     <meta charset="UTF-8">
     <title>ToDo list</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-firestore.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="../node_modules/handlebars/dist/handlebars.js"></script>
+    <script src="../node_modules/sammy/lib/sammy.js"></script>
+    <script src="../node_modules/sammy/lib/plugins/sammy.handlebars.js"></script>
+    <script src="../config/firebase.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <div id="container">
-        <h1>Todo List</h1>
-        <input id="input" type="text" placeholder="add something in todo list">
-
-        <button class="button" onclick="add()">Add</button>
-        <button class="button" onclick="remove()">Remove</button>
-    </div>
-
-    <script src="app.js"></script>
-
-    <div id="output"></div>
-
-    <script>
-        function add(input) {
-            const data = document.getElementById('input').value;
-            
-            if (data === '') {
-                document.getElementById('input').value = "Sorry, not be empty";
-
-            } else {
-                const button = document.getElementsByClassName('button')[0];
-                const result = document.getElementById('output');
-                const ul = document.createElement('ul');
-
-                const li = document.createElement('li');
-                li.innerHTML = data;
-                ul.appendChild(li);
-                result.append(ul);
-                document.getElementById('input').value = "";
-            }
-        }
-        
-        function remove(input) {
-            let parent = document.getElementById('output');
-            let firstElement = parent.firstChild;
-            parent.removeChild(firstElement);
-        }
-    </script>
+    <div id="main"></div>
+    <script type="module" src="../app.js"></script>
 </body>
 </html>
