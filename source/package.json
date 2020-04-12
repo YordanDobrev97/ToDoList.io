@@ -18,6 +18,7 @@
   "homepage": "https://github.com/YordanDobrev97/ToDoList#readme",
   "dependencies": {
     "handlebars": "^4.7.6",
-    "sammy": "^0.7.6"
+    "sammy": "^0.7.6",
+    "toastr": "^2.1.4"
   }
 }
