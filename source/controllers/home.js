@@ -13,6 +13,13 @@ export default {
                 footer: await context.load('../views/home/footer.hbs')
             }
             context.partial('../views/user/login.hbs');
+        },
+        async register(context) {
+            context.partials = {
+                header: await context.load('../views/home/header.hbs'),
+                footer: await context.load('../views/home/footer.hbs')
+            }
+            context.partial('../views/user/register.hbs');
         }
     }
 }
