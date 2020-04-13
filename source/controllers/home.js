@@ -5,6 +5,9 @@ export default {
                 header: await context.load('../views/home/header.hbs'),
                 footer: await context.load('../views/home/footer.hbs')
             }
+            context.isLogin = sessionStorage.getItem('id');
+            context.email = sessionStorage.getItem('email');
+            
             context.partial('../views/home/home.hbs');
         },
         async login(context) {

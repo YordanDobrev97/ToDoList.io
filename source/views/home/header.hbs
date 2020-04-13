@@ -1,17 +1,19 @@
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">ToDo Application</a>
+            <a class="navbar-brand" href="#/">ToDo Application</a>
         </div>
         <ul class="nav navbar-nav">
             <li class="active"><a href="#/">Home</a></li>
             {{#if isLogin}}
-                <li><a href="#">Create</a></li>    
+                <li><a href="#">Welcome {{email}}</a></li>
+                <li><a href="#">Create</a></li>  
+            {{else}}
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#/login"><span class="glyphicon glyphicon-user"></span>Login</a></li>
+                    <li><a href="#/register"><span class="glyphicon glyphicon-log-in"></span>Register</a></li>
+                </ul>  
             {{/if}}
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="#/login"><span class="glyphicon glyphicon-user"></span>Login</a></li>
-            <li><a href="#/register"><span class="glyphicon glyphicon-log-in"></span>Register</a></li>
         </ul>
     </div>
 </nav>

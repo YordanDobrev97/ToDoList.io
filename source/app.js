@@ -1,5 +1,5 @@
 import controllers from './controllers/home.js';
-import models  from './models/notes.js';
+import models  from './models/user.js';
 
 const app = Sammy('#main', function() {
     this.use('Handlebars', 'hbs');
@@ -8,7 +8,8 @@ const app = Sammy('#main', function() {
     this.get('#/login', controllers.get.login);
     this.get('#/register', controllers.get.register);
 
-    this.post('#/register', models.get.register);
+    this.post('#/register', models.post.register);
+    this.post('#/login', models.post.login);
 });
 
 (() => {
