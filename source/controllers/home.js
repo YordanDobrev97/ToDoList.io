@@ -15,7 +15,6 @@ export default {
             
             context.notes = data;
             context.partial('../views/home/home.hbs');    
-            //context.notes = [1, 2, 3];
         },
         async login(context) {
             context.partials = {

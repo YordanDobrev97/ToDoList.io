@@ -62,6 +62,7 @@ export default {
             };
 
             notes.notes.create(data);
+            context.redirect('#/');
         }
     }
 }
