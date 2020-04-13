@@ -7,6 +7,7 @@ const app = Sammy('#main', function() {
     this.get('#/', controllers.get.home);
     this.get('#/login', controllers.get.login);
     this.get('#/register', controllers.get.register);
+    this.get('#/logout', models.get.logout);
 
     this.post('#/register', models.post.register);
     this.post('#/login', models.post.login);

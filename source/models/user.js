@@ -1,6 +1,14 @@
 import notification from '../utils/notification.js';
 
 export default {
+    get: {
+        logout(context) {
+            sessionStorage.removeItem('id');
+            sessionStorage.removeItem('email');
+            context.redirect('#/');
+        }
+    },
+
     post: {
         register(context) {
            const {username, password,  repeatPassword} = context.params;
