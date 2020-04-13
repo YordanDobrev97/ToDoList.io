@@ -1,4 +1,5 @@
 import notification from '../utils/notification.js';
+import notes from './notes.js';
 
 export default {
     get: {
@@ -6,6 +7,17 @@ export default {
             sessionStorage.removeItem('id');
             sessionStorage.removeItem('email');
             context.redirect('#/');
+        },
+        async create(context) {
+            context.partials = {
+                header: await context.load('../views/home/header.hbs'),
+                footer: await context.load('../views/home/footer.hbs')
+            }
+            //extract function
+            context.isLogin = sessionStorage.getItem('id');
+            context.email = sessionStorage.getItem('email');
+
+            context.partial('../views/user/create.hbs');
         }
     },
 
@@ -39,6 +51,17 @@ export default {
                         context.redirect('#/');
                     }, 2000);
                 });
+        },
+        create(context) {
+            const {title, content} = context.params;
+            const userId = sessionStorage.getItem('id');
+            const data = {
+                title,
+                content,
+                userId
+            };
+
+            notes.notes.create(data);
         }
     }
 }

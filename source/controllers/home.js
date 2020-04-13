@@ -7,7 +7,8 @@ export default {
             }
             context.isLogin = sessionStorage.getItem('id');
             context.email = sessionStorage.getItem('email');
-            
+            //context.notes = [1, 2, 3];
+
             context.partial('../views/home/home.hbs');
         },
         async login(context) {
