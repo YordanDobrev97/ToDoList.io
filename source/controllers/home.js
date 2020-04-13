@@ -1,3 +1,6 @@
+import models from '../models/notes.js';
+import helper from '../utils/helper.js';
+
 export default {
     get: {
         async home(context) {
@@ -7,9 +10,12 @@ export default {
             }
             context.isLogin = sessionStorage.getItem('id');
             context.email = sessionStorage.getItem('email');
+            let data = await models.notes.getAll();
+            data = data.docs.map(helper.getDataWithId);
+            
+            context.notes = data;
+            context.partial('../views/home/home.hbs');    
             //context.notes = [1, 2, 3];
-
-            context.partial('../views/home/home.hbs');
         },
         async login(context) {
             context.partials = {

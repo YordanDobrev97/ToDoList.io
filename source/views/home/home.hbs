@@ -1,12 +1,17 @@
-
 {{> header}}
 
 <div class="container">
     {{#each notes}}
-        <li>Notes</li>
+    <div class="note-container">
+        <h2>{{title}}</h2>
+        <span>{{content}}</span>
+        {{#if isCreator}}
+        <button>Delete</button>    
+        {{/if}}
+    </div>
     {{else}}
-        <h1>Welcome to my Todo Application</h1>
-        <img src="https://thumbs.dreamstime.com/b/todo-list-blue-checked-sheet-23505160.jpg" alt="background-img">
+    <h1>Welcome to my Todo Application</h1>
+    <img src="https://thumbs.dreamstime.com/b/todo-list-blue-checked-sheet-23505160.jpg" alt="background-img">
     {{/each}}
 </div>
 

@@ -75,3 +75,8 @@ span.psw {
      width: 100%;
   }
 }
+
+.note-container {
+  background-color: #4CAF50;
+  color: white;
+}
