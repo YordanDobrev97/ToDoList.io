@@ -1,22 +1,8 @@
 {{> header}}
 
 <div class="container">
-    {{#if isLogin}}
-        {{#each notes}}
-            <div class="note-container">
-                <h2>{{title}}</h2>
-                <span>{{content}}</span>
-            </div>
-        {{else}}
-            {{!-- Todo move partial handler... --}}
-            <h1>Welcome to my Todo Application</h1>
-            <img src="https://thumbs.dreamstime.com/b/todo-list-blue-checked-sheet-23505160.jpg" alt="background-img">
-        {{/each}}
-    {{else}}
-        <h1>Welcome to my Todo Application</h1>
-        <img src="https://thumbs.dreamstime.com/b/todo-list-blue-checked-sheet-23505160.jpg" alt="background-img">
-    {{/if}}
-   
+    <h1>Welcome to my Todo Application</h1>
+    <img src="https://thumbs.dreamstime.com/b/todo-list-blue-checked-sheet-23505160.jpg" class="img-fluid" alt="background-img">
 </div>
 
 {{> footer}}

@@ -53,11 +53,12 @@ export default {
                 });
         },
         create(context) {
-            const {title, content} = context.params;
+            const {title, content, image} = context.params;
             const userId = sessionStorage.getItem('id');
             const data = {
                 title,
                 content,
+                image,
                 userId
             };
 

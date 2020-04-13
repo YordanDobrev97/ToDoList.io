@@ -10,10 +10,7 @@ export default {
             }
             context.isLogin = sessionStorage.getItem('id');
             context.email = sessionStorage.getItem('email');
-            let data = await models.notes.getAll();
-            data = data.docs.map(helper.getDataWithId);
-            
-            context.notes = data;
+
             context.partial('../views/home/home.hbs');    
         },
         async login(context) {
@@ -29,6 +26,22 @@ export default {
                 footer: await context.load('../views/home/footer.hbs')
             }
             context.partial('../views/user/register.hbs');
+        },
+        async completed(context) {
+            console.log('work');
+            context.partials = {
+                header: await context.load('../views/home/header.hbs'),
+                footer: await context.load('../views/home/footer.hbs')
+            }
+
+            context.isLogin = sessionStorage.getItem('id');
+            context.email = sessionStorage.getItem('email');
+            let data = await models.notes.getAll();
+            data = data.docs.map(helper.getDataWithId);
+            
+            context.notes = data;
+
+            context.partial('../views/note/completed-tasks.hbs');
         }
     }
 }

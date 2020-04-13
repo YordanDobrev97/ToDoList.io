@@ -1,0 +1,18 @@
+{{> header}}
+
+{{#each notes}}
+    <div class="d-flex flex-row">
+        <div class="p-2">
+            <h2>{{title}}</h2>
+            <span>{{content}}</span>
+        </div>
+        <div class="p-2">
+            <img src="{{image}}" class="course" alt="course">
+        </div>
+        <div class="p-2">
+            <button type="button" class="btn btn-lg btn-primary">Details</button>
+        </div>
+    </div>
+{{/each}}
+
+{{> footer}}
