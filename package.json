@@ -1,28 +1,24 @@
 {
-  "name": "todolist",
+  "name": "todo",
   "version": "1.0.0",
-  "description": "To do list",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
-  "dependencies": {
-    "express": "^4.17.1",
-    "gh-pages": "^2.1.1"
-  },
-  "devDependencies": {},
+  "description": "single page application",
+  "main": "app.js",
   "scripts": {
-    "test": "gh-pages -d public",
-    "deploy": "gh-pages -d source/public"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/YordanDobrev97/ToDoList.git"
   },
-  "author": "yordanDobrev",
-  "license": "MIT",
+  "author": "yordan",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/YordanDobrev97/ToDoList/issues"
   },
-  "homepage": "https://github.com/YordanDobrev97/ToDoList#readme"
+  "homepage": "https://github.com/YordanDobrev97/ToDoList#readme",
+  "dependencies": {
+    "handlebars": "^4.7.6",
+    "sammy": "^0.7.6",
+    "toastr": "^2.1.4"
+  }
 }
