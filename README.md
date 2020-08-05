@@ -9,5 +9,5 @@ ToDo list is a simple web application to save Your daily tasks
 - Handlebars
 - Toastr
 
-### App demo
-https://yordandobrev97.github.io/ToDoList/
+### Run
+Application start with LiveServer
