@@ -2,4 +2,4 @@
 .ntvs_analysis.dat
 
 .gitignore
-node_modules
+/node_modules
